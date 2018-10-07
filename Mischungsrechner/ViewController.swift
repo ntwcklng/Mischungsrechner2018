@@ -11,10 +11,10 @@ extension UIView {
     func fadeTransition(_ duration:CFTimeInterval) {
         let animation = CATransition()
         animation.timingFunction = CAMediaTimingFunction(name:
-            kCAMediaTimingFunctionEaseInEaseOut)
-        animation.type = kCATransitionFade
+            CAMediaTimingFunctionName.easeInEaseOut)
+        animation.type = CATransitionType.fade
         animation.duration = duration
-        layer.add(animation, forKey: kCATransitionFade)
+        layer.add(animation, forKey: convertFromCATransitionType(CATransitionType.fade))
     }
 }
 class ViewController: UIViewController {
@@ -120,6 +120,7 @@ class ViewController: UIViewController {
         _500.addTarget(self, action: #selector(self.buttonClickedBottle), for: .touchUpInside)
         _1000.addTarget(self, action: #selector(self.buttonClickedBottle), for: .touchUpInside)
         _1500.addTarget(self, action: #selector(self.buttonClickedBottle), for: .touchUpInside)
+
     }
     override func touchesBegan(_ touches: Set<UITouch>,
                                with event: UIEvent?) {
@@ -133,3 +134,8 @@ class ViewController: UIViewController {
 
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromCATransitionType(_ input: CATransitionType) -> String {
+	return input.rawValue
+}

@@ -1,0 +1,8 @@
+app_identifier("NZ3MYR5VXG.org.reactjs.marvinmieth.Mischungsrechner") # The bundle identifier of your app
+apple_id("mmieth@gmail.com") # Your Apple email address
+
+itc_team_id("117993260") # App Store Connect Team ID
+team_id("NZ3MYR5VXG") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

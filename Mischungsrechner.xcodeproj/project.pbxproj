@@ -14,6 +14,8 @@
 		583A3D882124A89D00619099 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 583A3D862124A89D00619099 /* LaunchScreen.storyboard */; };
 		583A3D932124A89D00619099 /* MischungsrechnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583A3D922124A89D00619099 /* MischungsrechnerTests.swift */; };
 		583A3D9E2124A89D00619099 /* MischungsrechnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583A3D9D2124A89D00619099 /* MischungsrechnerUITests.swift */; };
+		58D99183215E37B400626AFD /* MischungsrechnerUITestsFASTLANE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D99182215E37B400626AFD /* MischungsrechnerUITestsFASTLANE.swift */; };
+		58D9918B215E3A2300626AFD /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D9918A215E3A2300626AFD /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,13 @@
 			remoteInfo = Mischungsrechner;
 		};
 		583A3D9A2124A89D00619099 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 583A3D722124A89C00619099 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 583A3D792124A89C00619099;
+			remoteInfo = Mischungsrechner;
+		};
+		58D99185215E37B400626AFD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 583A3D722124A89C00619099 /* Project object */;
 			proxyType = 1;
@@ -47,6 +56,10 @@
 		583A3D992124A89D00619099 /* MischungsrechnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MischungsrechnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		583A3D9D2124A89D00619099 /* MischungsrechnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MischungsrechnerUITests.swift; sourceTree = "<group>"; };
 		583A3D9F2124A89D00619099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58D99180215E37B400626AFD /* MischungsrechnerUITestsFASTLANE.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MischungsrechnerUITestsFASTLANE.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58D99182215E37B400626AFD /* MischungsrechnerUITestsFASTLANE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MischungsrechnerUITestsFASTLANE.swift; sourceTree = "<group>"; };
+		58D99184215E37B400626AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58D9918A215E3A2300626AFD /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +84,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		58D9917D215E37B400626AFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +100,7 @@
 				583A3D7C2124A89C00619099 /* Mischungsrechner */,
 				583A3D912124A89D00619099 /* MischungsrechnerTests */,
 				583A3D9C2124A89D00619099 /* MischungsrechnerUITests */,
+				58D99181215E37B400626AFD /* MischungsrechnerUITestsFASTLANE */,
 				583A3D7B2124A89C00619099 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +111,7 @@
 				583A3D7A2124A89C00619099 /* Mischungsrechner.app */,
 				583A3D8E2124A89D00619099 /* MischungsrechnerTests.xctest */,
 				583A3D992124A89D00619099 /* MischungsrechnerUITests.xctest */,
+				58D99180215E37B400626AFD /* MischungsrechnerUITestsFASTLANE.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +145,16 @@
 				583A3D9F2124A89D00619099 /* Info.plist */,
 			);
 			path = MischungsrechnerUITests;
+			sourceTree = "<group>";
+		};
+		58D99181215E37B400626AFD /* MischungsrechnerUITestsFASTLANE */ = {
+			isa = PBXGroup;
+			children = (
+				58D99182215E37B400626AFD /* MischungsrechnerUITestsFASTLANE.swift */,
+				58D9918A215E3A2300626AFD /* SnapshotHelper.swift */,
+				58D99184215E37B400626AFD /* Info.plist */,
+			);
+			path = MischungsrechnerUITestsFASTLANE;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,18 +213,37 @@
 			productReference = 583A3D992124A89D00619099 /* MischungsrechnerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		58D9917F215E37B400626AFD /* MischungsrechnerUITestsFASTLANE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58D99189215E37B400626AFD /* Build configuration list for PBXNativeTarget "MischungsrechnerUITestsFASTLANE" */;
+			buildPhases = (
+				58D9917C215E37B400626AFD /* Sources */,
+				58D9917D215E37B400626AFD /* Frameworks */,
+				58D9917E215E37B400626AFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58D99186215E37B400626AFD /* PBXTargetDependency */,
+			);
+			name = MischungsrechnerUITestsFASTLANE;
+			productName = MischungsrechnerUITestsFASTLANE;
+			productReference = 58D99180215E37B400626AFD /* MischungsrechnerUITestsFASTLANE.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		583A3D722124A89C00619099 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Marvin Mieth";
 				TargetAttributes = {
 					583A3D792124A89C00619099 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					583A3D8D2124A89D00619099 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -200,6 +251,10 @@
 					};
 					583A3D982124A89D00619099 = {
 						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 583A3D792124A89C00619099;
+					};
+					58D9917F215E37B400626AFD = {
+						CreatedOnToolsVersion = 10.0;
 						TestTargetID = 583A3D792124A89C00619099;
 					};
 				};
@@ -220,6 +275,7 @@
 				583A3D792124A89C00619099 /* Mischungsrechner */,
 				583A3D8D2124A89D00619099 /* MischungsrechnerTests */,
 				583A3D982124A89D00619099 /* MischungsrechnerUITests */,
+				58D9917F215E37B400626AFD /* MischungsrechnerUITestsFASTLANE */,
 			);
 		};
 /* End PBXProject section */
@@ -243,6 +299,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		583A3D972124A89D00619099 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58D9917E215E37B400626AFD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,6 +340,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		58D9917C215E37B400626AFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58D99183215E37B400626AFD /* MischungsrechnerUITestsFASTLANE.swift in Sources */,
+				58D9918B215E3A2300626AFD /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +361,11 @@
 			isa = PBXTargetDependency;
 			target = 583A3D792124A89C00619099 /* Mischungsrechner */;
 			targetProxy = 583A3D9A2124A89D00619099 /* PBXContainerItemProxy */;
+		};
+		58D99186215E37B400626AFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 583A3D792124A89C00619099 /* Mischungsrechner */;
+			targetProxy = 58D99185215E37B400626AFD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -439,7 +516,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = NZ3MYR5VXG.org.reactjs.marvinmieth.Mischungsrechner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -457,7 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = NZ3MYR5VXG.org.reactjs.marvinmieth.Mischungsrechner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -544,6 +621,49 @@
 			};
 			name = Release;
 		};
+		58D99187215E37B400626AFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NZ3MYR5VXG;
+				INFOPLIST_FILE = MischungsrechnerUITestsFASTLANE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = GLOSSBOSS.MischungsrechnerUITestsFASTLANE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mischungsrechner;
+			};
+			name = Debug;
+		};
+		58D99188215E37B400626AFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NZ3MYR5VXG;
+				INFOPLIST_FILE = MischungsrechnerUITestsFASTLANE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = GLOSSBOSS.MischungsrechnerUITestsFASTLANE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mischungsrechner;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -579,6 +699,15 @@
 			buildConfigurations = (
 				583A3DA92124A89D00619099 /* Debug */,
 				583A3DAA2124A89D00619099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58D99189215E37B400626AFD /* Build configuration list for PBXNativeTarget "MischungsrechnerUITestsFASTLANE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58D99187215E37B400626AFD /* Debug */,
+				58D99188215E37B400626AFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
