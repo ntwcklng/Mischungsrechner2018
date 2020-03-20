@@ -19,13 +19,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zbb-Ij-OWH">
                                 <rect key="frame" x="0.0" y="244" width="414" height="981"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mischungsverhältnis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvV-1x-GH0">
-                                        <rect key="frame" x="20" y="38" width="374" height="24"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                        <color key="textColor" red="0.93725490196078431" green="0.87450980392156863" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <size key="shadowOffset" width="0.0" height="1"/>
-                                    </label>
                                     <stackView opaque="NO" contentMode="center" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gdC-LJ-ccx">
                                         <rect key="frame" x="20" y="68" width="374" height="34"/>
                                         <subviews>
@@ -54,44 +47,52 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <scrollView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" indicatorStyle="black" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="OmV-P0-GQo">
+                                    <scrollView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="left" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" indicatorStyle="white" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="OmV-P0-GQo">
                                         <rect key="frame" x="20" y="114" width="374" height="30"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="center" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pc6-Br-Fpf">
-                                                <rect key="frame" x="0.0" y="0.0" width="239" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="264" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gg-MC-koN">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gg-MC-koN" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                         <state key="normal" title="1:1">
-                                                            <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="titleColor" red="0.98611468079999998" green="0.41018718479999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vk-8Q-9Um">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vk-8Q-9Um" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
                                                         <rect key="frame" x="40" y="0.0" width="30" height="30"/>
+                                                        <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="1:2">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qj-RW-OVy">
-                                                        <rect key="frame" x="80" y="0.0" width="30" height="30"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qj-RW-OVy" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                        <rect key="frame" x="80" y="0.0" width="31" height="30"/>
+                                                        <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="1:4">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <state key="highlighted">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
+                                                        </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clx-xD-ACh">
-                                                        <rect key="frame" x="120" y="0.0" width="30" height="30"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clx-xD-ACh" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                        <rect key="frame" x="121" y="0.0" width="37" height="30"/>
+                                                        <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="1:10">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHO-62-2sW">
-                                                        <rect key="frame" x="160" y="0.0" width="30" height="30"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHO-62-2sW" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                        <rect key="frame" x="168" y="0.0" width="37" height="30"/>
+                                                        <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="1:15">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnD-O3-EvL">
-                                                        <rect key="frame" x="200" y="0.0" width="39" height="30"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnD-O3-EvL" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                        <rect key="frame" x="215" y="0.0" width="49" height="30"/>
+                                                        <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="1:500">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -117,50 +118,57 @@
                                             <action selector="BottleSizeEdited:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="hEG-pI-OQ0"/>
                                         </connections>
                                     </textField>
-                                    <scrollView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="left" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" indicatorStyle="black" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="EHc-fb-OAo">
-                                        <rect key="frame" x="20" y="256" width="374" height="30"/>
+                                    <scrollView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="left" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" indicatorStyle="white" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="EHc-fb-OAo">
+                                        <rect key="frame" x="20" y="256" width="374" height="22"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="center" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qf4-uE-Maf">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="337" height="22"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBi-qj-Idq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBi-qj-Idq" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="36" height="22"/>
+                                                        <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="100">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mev-lA-RkM">
-                                                        <rect key="frame" x="40" y="0.0" width="30" height="30"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mev-lA-RkM" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                        <rect key="frame" x="46" y="0.0" width="38" height="22"/>
+                                                        <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="200">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxu-jM-ayp">
-                                                        <rect key="frame" x="80" y="0.0" width="30" height="30"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxu-jM-ayp" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                        <rect key="frame" x="94" y="0.0" width="38" height="22"/>
+                                                        <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="250">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kI-8o-sjW">
-                                                        <rect key="frame" x="120" y="0.0" width="30" height="30"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kI-8o-sjW" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                        <rect key="frame" x="142" y="0.0" width="37" height="22"/>
+                                                        <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="473">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzs-Nf-wdj">
-                                                        <rect key="frame" x="160" y="0.0" width="30" height="30"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzs-Nf-wdj" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                        <rect key="frame" x="189" y="0.0" width="38" height="22"/>
+                                                        <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="500">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcR-dN-zx0">
-                                                        <rect key="frame" x="200" y="0.0" width="35" height="30"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcR-dN-zx0" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                        <rect key="frame" x="237" y="0.0" width="45" height="22"/>
+                                                        <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="1000">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veY-GC-fm8">
-                                                        <rect key="frame" x="245" y="0.0" width="35" height="30"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veY-GC-fm8" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                        <rect key="frame" x="292" y="0.0" width="45" height="22"/>
+                                                        <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="1500">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -186,17 +194,25 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flaschengröße in ml" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpP-px-SNs">
-                                        <rect key="frame" x="20" y="182" width="374" height="24"/>
+                                        <rect key="frame" x="20" y="185" width="374" height="24"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                        <color key="textColor" red="0.93725490196078431" green="0.87450980392156863" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.93725490199999995" green="0.87450980389999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mischungsverhältnis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvV-1x-GH0">
+                                        <rect key="frame" x="20" y="39" width="374" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <color key="textColor" red="0.93725490199999995" green="0.87450980389999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="1"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.074509803921568626" green="0.0" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="IHZ-xG-8po" firstAttribute="top" secondItem="UpP-px-SNs" secondAttribute="bottom" constant="5" id="0T2-gL-Vy4"/>
                                     <constraint firstItem="gdC-LJ-ccx" firstAttribute="leading" secondItem="Zbb-Ij-OWH" secondAttribute="leading" constant="20" id="5ZU-9A-ZoT"/>
                                     <constraint firstItem="AvV-1x-GH0" firstAttribute="leading" secondItem="Zbb-Ij-OWH" secondAttribute="leading" constant="20" id="63u-vo-A4b"/>
-                                    <constraint firstItem="AvV-1x-GH0" firstAttribute="top" secondItem="Zbb-Ij-OWH" secondAttribute="top" constant="38" id="9e2-Xw-Uq9"/>
+                                    <constraint firstItem="AvV-1x-GH0" firstAttribute="top" secondItem="Zbb-Ij-OWH" secondAttribute="top" constant="39" id="9e2-Xw-Uq9"/>
                                     <constraint firstItem="IHZ-xG-8po" firstAttribute="top" secondItem="Zbb-Ij-OWH" secondAttribute="top" constant="214" id="EIV-Wh-G1T"/>
                                     <constraint firstItem="IHZ-xG-8po" firstAttribute="leading" secondItem="Zbb-Ij-OWH" secondAttribute="leading" constant="20" id="Ez4-w6-RCX"/>
                                     <constraint firstAttribute="trailing" secondItem="vjH-Yo-rW9" secondAttribute="trailing" constant="20" id="F0R-7R-A0s"/>
@@ -210,12 +226,12 @@
                                     <constraint firstItem="EHc-fb-OAo" firstAttribute="leading" secondItem="Zbb-Ij-OWH" secondAttribute="leading" constant="20" id="hkQ-8p-wf2"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AvV-1x-GH0" secondAttribute="trailing" id="hnE-OK-bmZ"/>
                                     <constraint firstAttribute="trailing" secondItem="gdC-LJ-ccx" secondAttribute="trailing" constant="20" id="kYX-UP-WQq"/>
+                                    <constraint firstItem="gdC-LJ-ccx" firstAttribute="top" secondItem="AvV-1x-GH0" secondAttribute="bottom" constant="5" id="kdh-BD-1cN"/>
                                     <constraint firstAttribute="trailing" secondItem="OmV-P0-GQo" secondAttribute="trailing" constant="20" id="kdq-dK-RbY"/>
                                     <constraint firstItem="OmV-P0-GQo" firstAttribute="centerX" secondItem="gdC-LJ-ccx" secondAttribute="centerX" id="lem-xh-NzO"/>
                                     <constraint firstAttribute="trailing" secondItem="UpP-px-SNs" secondAttribute="trailing" constant="20" id="qGi-eo-H7T"/>
                                     <constraint firstAttribute="trailing" secondItem="IHZ-xG-8po" secondAttribute="trailing" constant="20" id="rqi-d7-F4X"/>
-                                    <constraint firstItem="gdC-LJ-ccx" firstAttribute="top" secondItem="AvV-1x-GH0" secondAttribute="bottom" constant="6" id="ui4-GS-1X5"/>
-                                    <constraint firstItem="UpP-px-SNs" firstAttribute="top" secondItem="OmV-P0-GQo" secondAttribute="bottom" constant="38" id="x9t-uU-tPb"/>
+                                    <constraint firstItem="UpP-px-SNs" firstAttribute="top" secondItem="OmV-P0-GQo" secondAttribute="bottom" constant="41" id="x9t-uU-tPb"/>
                                     <constraint firstItem="OmV-P0-GQo" firstAttribute="top" secondItem="gdC-LJ-ccx" secondAttribute="bottom" constant="12" id="xMC-6e-j0S"/>
                                 </constraints>
                             </view>
@@ -225,8 +241,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient-Outlines" translatesAutoresizingMaskIntoConstraints="NO" id="Z5d-F3-vP4">
-                                <rect key="frame" x="-1768" y="78" width="3950" height="43"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outlines2" translatesAutoresizingMaskIntoConstraints="NO" id="Z5d-F3-vP4">
+                                <rect key="frame" x="-3311" y="78" width="7036" height="43"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -273,6 +289,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Gradient-Outlines" width="3950" height="698"/>
+        <image name="outlines2" width="3518" height="572"/>
     </resources>
 </document>
