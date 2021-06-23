@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="244" width="414" height="981"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="center" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gdC-LJ-ccx">
-                                        <rect key="frame" x="20" y="68" width="374" height="34"/>
+                                        <rect key="frame" x="20" y="64.333333333333314" width="374" height="41.333333333333343"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="Part 1" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cLw-9C-gTU">
-                                                <rect key="frame" x="0.0" y="0.0" width="183" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="Part 1" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cLw-9C-gTU">
+                                                <rect key="frame" x="0.0" y="3.6666666666666856" width="183" height="34"/>
                                                 <color key="backgroundColor" red="0.93725490196078431" green="0.95686274509803915" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" keyboardKey="YES" updatesFrequently="YES"/>
@@ -35,8 +35,8 @@
                                                     <action selector="Part1InputEdited:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="gsX-v8-WdB"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" borderStyle="roundedRect" placeholder="Part 2" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cF4-ry-qmX">
-                                                <rect key="frame" x="191" y="0.0" width="183" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" borderStyle="roundedRect" placeholder="Part 2" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cF4-ry-qmX">
+                                                <rect key="frame" x="191" y="3.6666666666666856" width="183" height="34"/>
                                                 <color key="backgroundColor" red="0.93725490196078431" green="0.95686274509803915" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="textColor" red="0.32156862749999998" green="0.0" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -48,25 +48,25 @@
                                         </subviews>
                                     </stackView>
                                     <scrollView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="left" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" indicatorStyle="white" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="OmV-P0-GQo">
-                                        <rect key="frame" x="20" y="114" width="374" height="30"/>
+                                        <rect key="frame" x="20" y="117.66666666666669" width="374" height="30"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="center" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pc6-Br-Fpf">
                                                 <rect key="frame" x="0.0" y="0.0" width="264" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gg-MC-koN" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gg-MC-koN" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                         <state key="normal" title="1:1">
                                                             <color key="titleColor" red="0.98611468079999998" green="0.41018718479999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vk-8Q-9Um" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vk-8Q-9Um" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
                                                         <rect key="frame" x="40" y="0.0" width="30" height="30"/>
                                                         <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="1:2">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qj-RW-OVy" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qj-RW-OVy" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
                                                         <rect key="frame" x="80" y="0.0" width="31" height="30"/>
                                                         <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="1:4">
@@ -76,21 +76,21 @@
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clx-xD-ACh" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clx-xD-ACh" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
                                                         <rect key="frame" x="121" y="0.0" width="37" height="30"/>
                                                         <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="1:10">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHO-62-2sW" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHO-62-2sW" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
                                                         <rect key="frame" x="168" y="0.0" width="37" height="30"/>
                                                         <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="1:15">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnD-O3-EvL" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnD-O3-EvL" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
                                                         <rect key="frame" x="215" y="0.0" width="49" height="30"/>
                                                         <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="1:500">
@@ -108,7 +108,7 @@
                                             <constraint firstItem="pc6-Br-Fpf" firstAttribute="leading" secondItem="OmV-P0-GQo" secondAttribute="leading" id="frN-vc-kHU"/>
                                         </constraints>
                                     </scrollView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="473" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="IHZ-xG-8po">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="473" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="IHZ-xG-8po">
                                         <rect key="frame" x="20" y="214" width="374" height="34"/>
                                         <color key="backgroundColor" red="0.93725490196078431" green="0.95686274509803915" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" red="0.32156862749999998" green="0.0" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -124,49 +124,49 @@
                                             <stackView opaque="NO" contentMode="center" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qf4-uE-Maf">
                                                 <rect key="frame" x="0.0" y="0.0" width="337" height="22"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBi-qj-Idq" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBi-qj-Idq" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="36" height="22"/>
                                                         <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="100">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mev-lA-RkM" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mev-lA-RkM" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
                                                         <rect key="frame" x="46" y="0.0" width="38" height="22"/>
                                                         <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="200">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxu-jM-ayp" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxu-jM-ayp" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
                                                         <rect key="frame" x="94" y="0.0" width="38" height="22"/>
                                                         <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="250">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kI-8o-sjW" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kI-8o-sjW" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
                                                         <rect key="frame" x="142" y="0.0" width="37" height="22"/>
                                                         <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="473">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzs-Nf-wdj" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzs-Nf-wdj" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
                                                         <rect key="frame" x="189" y="0.0" width="38" height="22"/>
                                                         <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="500">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcR-dN-zx0" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcR-dN-zx0" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
                                                         <rect key="frame" x="237" y="0.0" width="45" height="22"/>
                                                         <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="1000">
                                                             <color key="titleColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veY-GC-fm8" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veY-GC-fm8" customClass="StyledButton" customModule="Mischungsrechner" customModuleProvider="target">
                                                         <rect key="frame" x="292" y="0.0" width="45" height="22"/>
                                                         <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
                                                         <state key="normal" title="1500">
@@ -185,13 +185,13 @@
                                         </constraints>
                                     </scrollView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flaschengröße in ml" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpP-px-SNs">
-                                        <rect key="frame" x="20" y="185" width="374" height="24"/>
+                                        <rect key="frame" x="20" y="188.66666666666669" width="374" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <color key="textColor" red="0.93725490199999995" green="0.87450980389999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mischungsverhältnis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvV-1x-GH0">
-                                        <rect key="frame" x="20" y="39" width="374" height="24"/>
+                                        <rect key="frame" x="20" y="39" width="374" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <color key="textColor" red="0.93725490199999995" green="0.87450980389999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -226,13 +226,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mischungsrechner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q98-18-RUT">
                                 <rect key="frame" x="20" y="129" width="374" height="34"/>
                                 <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="26"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" systemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outlines2" translatesAutoresizingMaskIntoConstraints="NO" id="Z5d-F3-vP4">
                                 <rect key="frame" x="-1552" y="78" width="3518" height="43"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ergebnis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjH-Yo-rW9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ergebnis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjH-Yo-rW9">
                                 <rect key="frame" x="20" y="188" width="374" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="ECg-6J-9xZ"/>
@@ -242,6 +242,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Z5d-F3-vP4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="8Rx-Je-OCB"/>
@@ -259,7 +260,6 @@
                             <constraint firstItem="q98-18-RUT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="wwf-dx-OHc"/>
                             <constraint firstItem="Zbb-Ij-OWH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="363" id="zcK-4y-MFI"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="BottleSize" destination="IHZ-xG-8po" id="xNv-44-kKd"/>
@@ -290,5 +290,8 @@
     </scenes>
     <resources>
         <image name="outlines2" width="3518" height="572"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -69,6 +69,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var HeaderLogo: UIImageView!
     
+    @IBOutlet weak var HelpButton: UIButton!
     
 
     
@@ -108,6 +109,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func BottleSizeEdited(_ sender: Any) {
+        if Int(BottleSize.text!)! == 2014 {
+            let alert = UIAlertController(title: "Glückwunsch!", message: "Dein Gutscheincode für den GLOSSBOSS-Shop lautet mischungsrechner10", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Danke!", comment: "Default action"), style: .default))
+            self.present(alert, animated: true, completion: nil)
+        }
+        if Int(BottleSize.text!)! == 69 {
+            let alert = UIAlertController(title: "69", message: "hehehe", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK...", comment: "Default action"), style: .default))
+            self.present(alert, animated: true, completion: nil)
+        }
         if Int(BottleSize.text!)! < 1000000 {
             calcDil()
         } else {
@@ -117,7 +128,30 @@ class ViewController: UIViewController {
         }
         
     }
-
+//    let collectionView: UICollectionView = {
+//        let frame = CGRect(x: 0, y: 250, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+//        let col = UICollectionView(frame: frame, collectionViewLayout: UICollectionViewFlowLayout())
+//        col.layer.masksToBounds = true
+//        col.layer.cornerRadius = 40
+//        col.clipsToBounds = true
+//        col.layer.shadowPath = UIBezierPath(roundedRect: col.bounds, cornerRadius: col.layer.cornerRadius).cgPath
+//        col.layer.shadowColor = UIColor.black.cgColor
+//        col.layer.shadowOpacity = 0.25
+//        col.layer.shadowOffset = CGSize(width: -10, height: -10)
+//        col.layer.shadowRadius = 8
+//        col.backgroundColor = UIColor.white.withAlphaComponent(0.95)
+//        col.layer.masksToBounds = false
+//           return col
+//       }()
+//    var clickedButton = true
+//    @IBAction func switched(){
+//        let origin: CGFloat = self.clickedButton ? view.frame.height : 250
+//        UIView.animate(withDuration: 0.35) {
+//            self.collectionView.frame.origin.y = origin
+//            self.clickedButton = !self.clickedButton
+//           }
+//       }
+//
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -133,6 +167,7 @@ class ViewController: UIViewController {
         ContentView.layer.shadowRadius = 8
         ContentView.layer.masksToBounds = false
         calcDil()
+//        switched()
         
         // Assign Parts Button Actions
         _11.addTarget(self, action: #selector(self.buttonClickedParts), for: .touchUpInside)
@@ -150,11 +185,19 @@ class ViewController: UIViewController {
         _500.addTarget(self, action: #selector(self.buttonClickedBottle), for: .touchUpInside)
         _1000.addTarget(self, action: #selector(self.buttonClickedBottle), for: .touchUpInside)
         _1500.addTarget(self, action: #selector(self.buttonClickedBottle), for: .touchUpInside)
+//        HelpButton.addTarget(self, action: #selector(self.switched), for: .touchUpInside)
+        
+//        view.addSubview(collectionView)
 
     }
     override func touchesBegan(_ touches: Set<UITouch>,
                                with event: UIEvent?) {
         self.view.endEditing(true)
+//        if clickedButton {
+//            self.switched()
+//        }
+//
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
