@@ -2,9 +2,11 @@
 //  AppDelegate.swift
 //  Mischungsrechner
 //
-//  Created by Marvin Mieth on 15.08.18.
-//  Copyright © 2018 Marvin Mieth. All rights reserved.
+//  Created by Marvin Mieth on 05.03.23.
+//  Copyright © 2023 Marvin Mieth. All rights reserved.
 //
+
+import Foundation
 
 import UIKit
 
@@ -43,4 +45,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
