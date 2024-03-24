@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6109B65D29B4D0FF003466CA /* MischungsrechnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6109B65C29B4D0FF003466CA /* MischungsrechnerView.swift */; };
 		61B2E6BA29B4A18D00765413 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 61B2E6B529B4A18D00765413 /* Base.lproj */; };
 		61B2E6BC29B4A18D00765413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61B2E6B729B4A18D00765413 /* Assets.xcassets */; };
 		61B2E6BD29B4A18D00765413 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61B2E6B829B4A18D00765413 /* Launch Screen.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		583A3D7A2124A89C00619099 /* Mischungsrechner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mischungsrechner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6109B65C29B4D0FF003466CA /* MischungsrechnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MischungsrechnerView.swift; sourceTree = "<group>"; };
 		61B2E6B429B4A18D00765413 /* Mischungsrechner.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Mischungsrechner.entitlements; sourceTree = "<group>"; };
 		61B2E6B529B4A18D00765413 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		61B2E6B629B4A18D00765413 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 		583A3D712124A89C00619099 = {
 			isa = PBXGroup;
 			children = (
+				6109B65C29B4D0FF003466CA /* MischungsrechnerView.swift */,
 				583A3D7C2124A89C00619099 /* Mischungsrechner */,
 				583A3D7B2124A89C00619099 /* Products */,
 			);
@@ -144,6 +147,7 @@
 			files = (
 				61B2E6C029B4A1C900765413 /* AppDelegate.swift in Sources */,
 				61B2E6BE29B4A18D00765413 /* ViewController.swift in Sources */,
+				6109B65D29B4D0FF003466CA /* MischungsrechnerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
