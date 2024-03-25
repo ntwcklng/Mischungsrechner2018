@@ -32,9 +32,9 @@ class StyledButton: UIButton {
     func setupDefaults() {
         self.contentEdgeInsets = UIEdgeInsets(top: 6, left: 10, bottom: 6, right: 10)
         //self.setTitleColor(UIColor(red: 0.3294, green: 0.3294, blue: 0.3294, alpha: 1.0), for: .normal)
-        self.setTitleColor(UIColor.label, for: .normal)
+        //self.setTitleColor(UIColor.label, for: .normal)
         //self.backgroundColor = UIColor(red: 0.8863, green: 0.8863, blue: 0.8863, alpha: 1.0)
-        self.backgroundColor = UIColor.tertiaryLabel
+        self.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
         //self.layer.borderWidth = 1
         //self.layer.borderColor = UIColor(red:1.00, green:0.32, blue:0.00, alpha:0.60).cgColor;
         self.layer.cornerRadius = 6
@@ -161,13 +161,14 @@ class ViewController: UIViewController {
         ContentView.layer.masksToBounds = true
         ContentView.layer.cornerRadius = 10
         ContentView.clipsToBounds = true
-        ContentView.layer.shadowPath =
+        /*ContentView.layer.shadowPath =
               UIBezierPath(roundedRect: ContentView.bounds,
               cornerRadius: ContentView.layer.cornerRadius).cgPath
         ContentView.layer.shadowColor = UIColor.black.cgColor
-        ContentView.layer.shadowOpacity = 0.20
+        ContentView.layer.shadowOpacity = 0.10
         ContentView.layer.shadowOffset = CGSize(width: -10, height: -5)
         ContentView.layer.shadowRadius = 20
+         */
         ContentView.layer.masksToBounds = false
         calcDil()
 //        switched()

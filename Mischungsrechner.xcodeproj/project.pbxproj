@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6109B65D29B4D0FF003466CA /* MischungsrechnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6109B65C29B4D0FF003466CA /* MischungsrechnerView.swift */; };
-		61B2E6BA29B4A18D00765413 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 61B2E6B529B4A18D00765413 /* Base.lproj */; };
 		61B2E6BC29B4A18D00765413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61B2E6B729B4A18D00765413 /* Assets.xcassets */; };
 		61B2E6BD29B4A18D00765413 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61B2E6B829B4A18D00765413 /* Launch Screen.storyboard */; };
 		61B2E6BE29B4A18D00765413 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B2E6B929B4A18D00765413 /* ViewController.swift */; };
@@ -20,7 +19,6 @@
 		583A3D7A2124A89C00619099 /* Mischungsrechner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mischungsrechner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6109B65C29B4D0FF003466CA /* MischungsrechnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MischungsrechnerView.swift; sourceTree = "<group>"; };
 		61B2E6B429B4A18D00765413 /* Mischungsrechner.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Mischungsrechner.entitlements; sourceTree = "<group>"; };
-		61B2E6B529B4A18D00765413 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		61B2E6B629B4A18D00765413 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61B2E6B729B4A18D00765413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61B2E6B829B4A18D00765413 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 			children = (
 				61B2E6BF29B4A1C900765413 /* AppDelegate.swift */,
 				61B2E6B729B4A18D00765413 /* Assets.xcassets */,
-				61B2E6B529B4A18D00765413 /* Base.lproj */,
 				61B2E6B629B4A18D00765413 /* Info.plist */,
 				61B2E6C129B4A32600765413 /* Main.storyboard */,
 				61B2E6B829B4A18D00765413 /* Launch Screen.storyboard */,
@@ -98,8 +95,9 @@
 		583A3D722124A89C00619099 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1530;
 				ORGANIZATIONNAME = "Marvin Mieth";
 				TargetAttributes = {
 					583A3D792124A89C00619099 = {
@@ -132,7 +130,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				61C8B1DD29B4A3750074D4B0 /* Main.storyboard in Resources */,
-				61B2E6BA29B4A18D00765413 /* Base.lproj in Resources */,
 				61B2E6BC29B4A18D00765413 /* Assets.xcassets in Resources */,
 				61B2E6BD29B4A18D00765413 /* Launch Screen.storyboard in Resources */,
 			);
@@ -158,6 +155,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -192,6 +190,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -220,6 +219,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -254,6 +254,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -278,7 +279,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 42;
+				CURRENT_PROJECT_VERSION = 44;
 				DEVELOPMENT_TEAM = NZ3MYR5VXG;
 				INFOPLIST_FILE = Mischungsrechner/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
@@ -287,7 +288,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.10;
+				MARKETING_VERSION = 3.0.11;
 				PRODUCT_BUNDLE_IDENTIFIER = NZ3MYR5VXG.org.reactjs.marvinmieth.Mischungsrechner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -304,7 +305,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 42;
+				CURRENT_PROJECT_VERSION = 44;
 				DEVELOPMENT_TEAM = NZ3MYR5VXG;
 				INFOPLIST_FILE = Mischungsrechner/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
@@ -313,7 +314,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.10;
+				MARKETING_VERSION = 3.0.11;
 				PRODUCT_BUNDLE_IDENTIFIER = NZ3MYR5VXG.org.reactjs.marvinmieth.Mischungsrechner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
