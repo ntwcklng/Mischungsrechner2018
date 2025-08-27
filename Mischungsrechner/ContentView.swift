@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct ContentView: View {
     @State private var part1: String = "1"
@@ -18,8 +19,21 @@ struct ContentView: View {
     @State private var logoTapCount = 0
     @State private var showingSecretMode = false
     @State private var useOunces = false
+    @State private var calculatedResult: String = ""
+    @State private var debounceTimer: Timer?
+    @State private var showConfetti = false
+    @State private var orb1Offset = CGSize(width: -100, height: -200)
+    @State private var orb1Scale: CGFloat = 1.0
+    @State private var orb1Blur: CGFloat = 0
+    @State private var orb2Offset = CGSize(width: 150, height: 100)
+    @State private var orb2Scale: CGFloat = 1.0
+    @State private var orb2Blur: CGFloat = 0
+    @State private var orb3Offset = CGSize(width: -50, height: 300)
+    @State private var orb3Scale: CGFloat = 1.0
+    @State private var orb3Blur: CGFloat = 0
+    @State private var animationTimer: Timer?
     
-    private var calculatedResult: String {
+    private func calculateResult() -> String {
         guard let p1 = Double(part1),
               let p2 = Double(part2),
               let bottle = Double(bottleSize),
@@ -34,6 +48,58 @@ struct ContentView: View {
         
         let unit = useOunces ? "fl oz" : "ml"
         return "\(Int(part1Output))\(unit) : \(Int(part2Output))\(unit)"
+    }
+    
+    private func debounceCalculation() {
+        debounceTimer?.invalidate()
+        debounceTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false) { _ in
+            calculatedResult = calculateResult()
+            triggerConfettiIfNeeded()
+        }
+    }
+    
+    private func triggerConfettiIfNeeded() {
+        if showingSecretMode && calculatedResult != "Gib gültige Werte ein" {
+            showConfetti = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                showConfetti = false
+            }
+        }
+    }
+    
+    private func startFloatingAnimations() {
+        // Purple orb - smooth continuous movement that actually works
+        withAnimation(.easeInOut(duration: 8).repeatForever(autoreverses: true)) {
+            orb1Offset = CGSize(width: -200, height: -300)
+        }
+        withAnimation(.easeInOut(duration: 6).repeatForever(autoreverses: true)) {
+            orb1Scale = 1.4
+        }
+        withAnimation(.easeInOut(duration: 9).repeatForever(autoreverses: true)) {
+            orb1Blur = 3.5
+        }
+        
+        // Blue orb - smooth continuous movement
+        withAnimation(.easeInOut(duration: 12).repeatForever(autoreverses: true)) {
+            orb2Offset = CGSize(width: 250, height: 50)
+        }
+        withAnimation(.easeInOut(duration: 7).repeatForever(autoreverses: true)) {
+            orb2Scale = 1.3
+        }
+        withAnimation(.easeInOut(duration: 10).repeatForever(autoreverses: true)) {
+            orb2Blur = 2.8
+        }
+        
+        // Pink orb - smooth continuous movement
+        withAnimation(.easeInOut(duration: 15).repeatForever(autoreverses: true)) {
+            orb3Offset = CGSize(width: -10, height: 380)
+        }
+        withAnimation(.easeInOut(duration: 8).repeatForever(autoreverses: true)) {
+            orb3Scale = 1.25
+        }
+        withAnimation(.easeInOut(duration: 11).repeatForever(autoreverses: true)) {
+            orb3Blur = 2.2
+        }
     }
     
     private var unitLabel: String {
@@ -76,7 +142,9 @@ struct ContentView: View {
                         endRadius: 150
                     ))
                     .frame(width: 300, height: 300)
-                    .offset(x: -100, y: -200)
+                    .scaleEffect(orb1Scale)
+                    .blur(radius: orb1Blur)
+                    .offset(orb1Offset)
                 
                 Circle()
                     .fill(RadialGradient(
@@ -86,7 +154,9 @@ struct ContentView: View {
                         endRadius: 120
                     ))
                     .frame(width: 250, height: 250)
-                    .offset(x: 150, y: 100)
+                    .scaleEffect(orb2Scale)
+                    .blur(radius: orb2Blur)
+                    .offset(orb2Offset)
                 
                 Circle()
                     .fill(RadialGradient(
@@ -96,7 +166,9 @@ struct ContentView: View {
                         endRadius: 100
                     ))
                     .frame(width: 200, height: 200)
-                    .offset(x: -50, y: 300)
+                    .scaleEffect(orb3Scale)
+                    .blur(radius: orb3Blur)
+                    .offset(orb3Offset)
             }
             
             VStack(spacing: 30) {
@@ -132,9 +204,41 @@ struct ContentView: View {
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
                                 .keyboardType(.decimalPad)
-                                .padding()
-                                .background(.ultraThinMaterial.opacity(0.8))
-                                .clipShape(RoundedRectangle(cornerRadius: 16))
+                                .padding(20)
+                                .background(
+                                    ZStack {
+                                        RoundedRectangle(cornerRadius: 24)
+                                            .fill(.white)
+                                            .opacity(0.09)
+                                        
+                                        RoundedRectangle(cornerRadius: 24)
+                                            .stroke(
+                                                LinearGradient(
+                                                    colors: [.white.opacity(0.3), .clear, .white.opacity(0.2)],
+                                                    startPoint: .topLeading,
+                                                    endPoint: .bottomTrailing
+                                                ),
+                                                lineWidth: 1.0
+                                            )
+                                        
+                                        RoundedRectangle(cornerRadius: 24)
+                                            .fill(
+                                                RadialGradient(
+                                                    colors: [.white.opacity(0.1), .clear],
+                                                    center: .topLeading,
+                                                    startRadius: 0,
+                                                    endRadius: 100
+                                                )
+                                            )
+                                    }
+                                )
+                                .shadow(color: .black.opacity(0.2), radius: 8, x: 0, y: 4)
+                                .shadow(color: .white.opacity(0.1), radius: 0, x: 0, y: 1)
+                                .onChange(of: part1) { _ in debounceCalculation() }
+                                .onSubmit { 
+                                    calculatedResult = calculateResult()
+                                    triggerConfettiIfNeeded()
+                                }
                             
                             Text(":")
                                 .font(.title)
@@ -147,9 +251,41 @@ struct ContentView: View {
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
                                 .keyboardType(.decimalPad)
-                                .padding()
-                                .background(.ultraThinMaterial.opacity(0.8))
-                                .clipShape(RoundedRectangle(cornerRadius: 16))
+                                .padding(20)
+                                .background(
+                                    ZStack {
+                                        RoundedRectangle(cornerRadius: 24)
+                                            .fill(.white)
+                                            .opacity(0.09)
+                                        
+                                        RoundedRectangle(cornerRadius: 24)
+                                            .stroke(
+                                                LinearGradient(
+                                                    colors: [.white.opacity(0.3), .clear, .white.opacity(0.2)],
+                                                    startPoint: .topLeading,
+                                                    endPoint: .bottomTrailing
+                                                ),
+                                                lineWidth: 1.0
+                                            )
+                                        
+                                        RoundedRectangle(cornerRadius: 24)
+                                            .fill(
+                                                RadialGradient(
+                                                    colors: [.white.opacity(0.1), .clear],
+                                                    center: .topLeading,
+                                                    startRadius: 0,
+                                                    endRadius: 100
+                                                )
+                                            )
+                                    }
+                                )
+                                .shadow(color: .black.opacity(0.2), radius: 8, x: 0, y: 4)
+                                .shadow(color: .white.opacity(0.1), radius: 0, x: 0, y: 1)
+                                .onChange(of: part2) { _ in debounceCalculation() }
+                                .onSubmit { 
+                                    calculatedResult = calculateResult()
+                                    triggerConfettiIfNeeded()
+                                }
                         }
                         
                         ScrollView(.horizontal, showsIndicators: false) {
@@ -174,26 +310,89 @@ struct ContentView: View {
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
                                 .keyboardType(.decimalPad)
-                                .padding()
-                                .background(.ultraThinMaterial.opacity(0.8))
-                                .clipShape(RoundedRectangle(cornerRadius: 16))
+                                .padding(20)
+                                .background(
+                                    ZStack {
+                                        RoundedRectangle(cornerRadius: 24)
+                                            .fill(.white)
+                                            .opacity(0.09)
+                                        
+                                        RoundedRectangle(cornerRadius: 24)
+                                            .stroke(
+                                                LinearGradient(
+                                                    colors: [.white.opacity(0.3), .clear, .white.opacity(0.2)],
+                                                    startPoint: .topLeading,
+                                                    endPoint: .bottomTrailing
+                                                ),
+                                                lineWidth: 1.0
+                                            )
+                                        
+                                        RoundedRectangle(cornerRadius: 24)
+                                            .fill(
+                                                RadialGradient(
+                                                    colors: [.white.opacity(0.1), .clear],
+                                                    center: .topLeading,
+                                                    startRadius: 0,
+                                                    endRadius: 100
+                                                )
+                                            )
+                                    }
+                                )
+                                .shadow(color: .black.opacity(0.2), radius: 8, x: 0, y: 4)
+                                .shadow(color: .white.opacity(0.1), radius: 0, x: 0, y: 1)
                                 .onChange(of: bottleSize) { newValue in
                                     let mlValue = convertFromDisplayValue(newValue)
                                     if !mlValue.isEmpty {
                                         checkForEasterEggs(mlValue)
                                     }
+                                    debounceCalculation()
+                                }
+                                .onSubmit { 
+                                    calculatedResult = calculateResult()
+                                    triggerConfettiIfNeeded()
                                 }
                             
                             // Unit Toggle
-                            Button(action: { useOunces.toggle() }) {
+                            Button(action: { 
+                                useOunces.toggle()
+                                calculatedResult = calculateResult()
+                                triggerConfettiIfNeeded()
+                            }) {
                                 Text(useOunces ? "fl oz" : "ml")
                                     .font(.callout)
                                     .fontWeight(.medium)
                                     .foregroundColor(.white.opacity(0.9))
-                                    .padding(.horizontal, 12)
-                                    .padding(.vertical, 8)
-                                    .background(.ultraThinMaterial.opacity(0.6))
-                                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                                    .padding(.horizontal, 16)
+                                    .padding(.vertical, 12)
+                                    .background(
+                                        ZStack {
+                                            RoundedRectangle(cornerRadius: 16)
+                                                .fill(.white)
+                                                .opacity(0.09)
+                                            
+                                            RoundedRectangle(cornerRadius: 16)
+                                                .stroke(
+                                                    LinearGradient(
+                                                        colors: [.white.opacity(0.3), .clear, .white.opacity(0.2)],
+                                                        startPoint: .topLeading,
+                                                        endPoint: .bottomTrailing
+                                                    ),
+                                                    lineWidth: 1.0
+                                                )
+                                            
+                                            RoundedRectangle(cornerRadius: 16)
+                                                .fill(
+                                                    RadialGradient(
+                                                        colors: [.white.opacity(0.1), .clear],
+                                                        center: .topLeading,
+                                                        startRadius: 0,
+                                                        endRadius: 60
+                                                    )
+                                                )
+                                        }
+                                    )
+                                    .shadow(color: .black.opacity(0.2), radius: 8, x: 0, y: 4)
+                                    .shadow(color: .white.opacity(0.1), radius: 0, x: 0, y: 1)
                             }
                         }
                         
@@ -251,10 +450,21 @@ struct ContentView: View {
                     )
                     .ignoresSafeArea(.all, edges: .bottom)
             }
+            
+            // Confetti overlay for party mode
+            if showConfetti {
+                ConfettiView()
+                    .ignoresSafeArea(.all)
+            }
         }
         .preferredColorScheme(.dark)
         .onTapGesture {
             hideKeyboard()
+        }
+        .onAppear {
+            calculatedResult = calculateResult()
+            triggerConfettiIfNeeded()
+            startFloatingAnimations()
         }
         .alert(alertTitle, isPresented: $showingAlert) {
             Button("OK") { }
@@ -269,6 +479,8 @@ struct ContentView: View {
     private func setParts(_ p1: String, _ p2: String) {
         part1 = p1
         part2 = p2
+        calculatedResult = calculateResult()
+        triggerConfettiIfNeeded()
     }
     
     private func handleLogoTap() {
@@ -279,8 +491,13 @@ struct ContentView: View {
             showingAlert = true
         case 10:
             showingSecretMode.toggle()
-            alertTitle = "🎉 GEHEIMER MODUS FREIGESCHALTET!"
-            alertMessage = "Du hast den geheimen Modus entdeckt! Die App ist jetzt im Party-Modus! 🎊"
+            if showingSecretMode {
+                alertTitle = "🎉 GEHEIMER MODUS FREIGESCHALTET!"
+                alertMessage = "Du hast den geheimen Modus entdeckt! Die App ist jetzt im Party-Modus! 🎊"
+            } else {
+                alertTitle = "👋 PARTY VORBEI"
+                alertMessage = "Du hast den Party-Modus verlassen. Zurück zur normalen Ansicht! 🙂"
+            }
             showingAlert = true
             logoTapCount = 0
         case 15:
@@ -362,10 +579,37 @@ struct RatioButton: View {
                 .font(.callout)
                 .fontWeight(.medium)
                 .foregroundColor(.white.opacity(0.9))
-                .padding(.horizontal, 14)
-                .padding(.vertical, 8)
-                .background(.ultraThinMaterial.opacity(0.6))
-                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .padding(.horizontal, 16)
+                .padding(.vertical, 10)
+                .background(
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 14)
+                            .fill(.white)
+                            .opacity(0.09)
+                        
+                        RoundedRectangle(cornerRadius: 14)
+                            .stroke(
+                                LinearGradient(
+                                    colors: [.white.opacity(0.3), .clear, .white.opacity(0.2)],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                ),
+                                lineWidth: 1.0
+                            )
+                        
+                        RoundedRectangle(cornerRadius: 14)
+                            .fill(
+                                RadialGradient(
+                                    colors: [.white.opacity(0.1), .clear],
+                                    center: .topLeading,
+                                    startRadius: 0,
+                                    endRadius: 40
+                                )
+                            )
+                    }
+                )
+                .shadow(color: .black.opacity(0.2), radius: 8, x: 0, y: 4)
+                .shadow(color: .white.opacity(0.1), radius: 0, x: 0, y: 1)
         }
     }
 }
@@ -381,11 +625,72 @@ struct BottleSizeButton: View {
                 .font(.callout)
                 .fontWeight(.medium)
                 .foregroundColor(.white.opacity(0.9))
-                .padding(.horizontal, 12)
-                .padding(.vertical, 8)
-                .background(.ultraThinMaterial.opacity(0.6))
-                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .padding(.horizontal, 14)
+                .padding(.vertical, 10)
+                .background(
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 14)
+                            .fill(.white)
+                            .opacity(0.09)
+                        
+                        RoundedRectangle(cornerRadius: 14)
+                            .stroke(
+                                LinearGradient(
+                                    colors: [.white.opacity(0.3), .clear, .white.opacity(0.2)],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                ),
+                                lineWidth: 1.0
+                            )
+                        
+                        RoundedRectangle(cornerRadius: 14)
+                            .fill(
+                                RadialGradient(
+                                    colors: [.white.opacity(0.1), .clear],
+                                    center: .topLeading,
+                                    startRadius: 0,
+                                    endRadius: 40
+                                )
+                            )
+                    }
+                )
+                .shadow(color: .black.opacity(0.2), radius: 8, x: 0, y: 4)
+                .shadow(color: .white.opacity(0.1), radius: 0, x: 0, y: 1)
         }
+    }
+}
+
+struct ConfettiView: View {
+    @State private var animate = false
+    let colors = [Color.red, Color.blue, Color.green, Color.yellow, Color.orange, Color.purple, Color.pink, Color.cyan]
+    
+    var body: some View {
+        ZStack {
+            ForEach(0..<50, id: \.self) { index in
+                Circle()
+                    .fill(colors.randomElement() ?? Color.blue)
+                    .frame(width: CGFloat.random(in: 4...12), height: CGFloat.random(in: 4...12))
+                    .scaleEffect(animate ? 0 : 1)
+                    .offset(
+                        x: animate ? CGFloat.random(in: -400...400) : 0,
+                        y: animate ? CGFloat.random(in: -600...600) : 0
+                    )
+                    .opacity(animate ? 0 : 1)
+                    .rotationEffect(.degrees(animate ? Double.random(in: 0...360) : 0))
+                    .animation(
+                        .easeOut(duration: 1.0)
+                        .delay(Double.random(in: 0...0.3)),
+                        value: animate
+                    )
+                    .onAppear {
+                        animate = true
+                    }
+                    .onDisappear {
+                        animate = false
+                    }
+            }
+        }
+        .allowsHitTesting(false)
     }
 }
 
