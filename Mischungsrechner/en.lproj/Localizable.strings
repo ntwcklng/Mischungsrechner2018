@@ -1,0 +1,109 @@
+/* App */
+"app.title" = "Mixing Calculator";
+
+/* Modes */
+"mode.normal" = "Normal";
+"mode.reverse" = "Reverse";
+
+/* Sections */
+"section.product" = "Product";
+"section.ratio" = "Ratio";
+"section.totalAmount" = "Total amount";
+"section.productAmount" = "Product amount";
+"section.result" = "Result";
+"section.costCalculator" = "Cost calculator";
+
+/* Product */
+"product.select" = "Select product";
+
+/* Reverse */
+"reverse.hint" = "How much water do you need?";
+
+/* Results */
+"result.product" = "Product";
+"result.water" = "Water";
+"result.invalid" = "Enter valid values";
+
+/* Buttons */
+"button.share" = "Share";
+"button.save" = "Save";
+"button.done" = "Done";
+"button.cancel" = "Cancel";
+"button.delete" = "Delete";
+
+/* Cost */
+"cost.pricePerLiter" = "Price per liter";
+"cost.perFill" = "Cost per fill";
+
+/* Party Mode */
+"partyMode" = "Party mode";
+
+/* Presets */
+"presets.title" = "Products";
+"presets.custom" = "Custom";
+
+/* Save */
+"save.title" = "Save";
+"save.newProduct" = "Save new product";
+"save.name" = "Name";
+
+/* History */
+"history.title" = "History";
+"history.empty" = "No history";
+"history.emptyDescription" = "Your saved calculations will appear here.";
+
+/* Alerts */
+"alert.saved" = "Saved";
+"alert.savedMessage" = "The calculation has been saved to history.";
+
+/* Share */
+"share.ratio" = "Mixing ratio";
+"share.totalAmount" = "Total amount";
+"share.cost" = "Cost";
+
+/* Categories */
+"category.apc" = "APC";
+"category.glass" = "Glass";
+"category.detailer" = "Detailer";
+"category.interior" = "Interior";
+"category.wheels" = "Wheels";
+"category.wash" = "Wash";
+"category.other" = "Other";
+
+/* Presets */
+"preset.apcLight" = "APC light";
+"preset.apcMedium" = "APC medium";
+"preset.apcStrong" = "APC strong";
+"preset.glassCleaner" = "Glass cleaner";
+"preset.glassCleanerStrong" = "Glass cleaner strong";
+"preset.quickDetailer" = "Quick Detailer";
+"preset.spraySealant" = "Spray sealant";
+"preset.interiorLight" = "Interior cleaner light";
+"preset.interiorStrong" = "Interior cleaner strong";
+"preset.leatherCleaner" = "Leather cleaner";
+"preset.wheelCleanerLight" = "Wheel cleaner light";
+"preset.wheelCleanerStrong" = "Wheel cleaner strong";
+"preset.carShampoo" = "Car shampoo";
+"preset.snowFoamLight" = "Snow Foam light";
+"preset.snowFoamStrong" = "Snow Foam strong";
+"preset.bugRemover" = "Bug remover";
+"preset.tarRemover" = "Tar remover";
+"preset.ironRemover" = "Iron Remover";
+
+/* Easter Eggs */
+"easter.keepTapping" = "Hmm... keep tapping...";
+"easter.secretUnlocked" = "SECRET MODE UNLOCKED!";
+"easter.secretMessage" = "You discovered the secret mode! The app is now in party mode! 🎊";
+"easter.partyOver" = "PARTY OVER";
+"easter.partyOverMessage" = "You left party mode. Back to normal view! 🙂";
+"easter.tooMuchTapping" = "Okay okay, you really like tapping on things!";
+"easter.coupon" = "Your coupon code for the GLOSSBOSS shop is mischungsrechner10";
+"easter.nice" = "Nice.";
+"easter.420" = "Dude... that's a lot of ml, man...";
+"easter.leet" = "L33T H4X0R detected! You know the old ways...";
+"easter.over9000" = "Over 9000!!! This bottle size is OVER 9000!!!";
+"easter.whale" = "That's %d liters! Planning a whale party?";
+"easter.zeroBottle" = "A 0ml bottle? That's... philosophical.";
+"easter.42" = "42? The answer to the ultimate question of life, the universe, and everything!";
+"easter.pi" = "Pi detected! 3.14... mmm, pie! 🍰";
+"easter.leetRatio" = "1337 ratio detected! You mix like a true hacker!";

@@ -11,6 +11,7 @@
 		61B2E6BD29B4A18D00765413 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61B2E6B829B4A18D00765413 /* Launch Screen.storyboard */; };
 		61NEW001 /* MischungsrechnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61NEW000 /* MischungsrechnerApp.swift */; };
 		61NEW003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61NEW002 /* ContentView.swift */; };
+		61LOC001 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61LOC000 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		61B2E6B829B4A18D00765413 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		61NEW000 /* MischungsrechnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MischungsrechnerApp.swift; sourceTree = "<group>"; };
 		61NEW002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		61LOC002 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		61LOC003 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 				61B2E6B829B4A18D00765413 /* Launch Screen.storyboard */,
 				61B2E6B629B4A18D00765413 /* Info.plist */,
 				61B2E6B429B4A18D00765413 /* Mischungsrechner.entitlements */,
+				61LOC000 /* Localizable.strings */,
 			);
 			path = Mischungsrechner;
 			sourceTree = "<group>";
@@ -102,9 +106,10 @@
 			};
 			buildConfigurationList = 583A3D752124A89C00619099 /* Build configuration list for PBXProject "Mischungsrechner" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = de;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				de,
 				en,
 				Base,
 			);
@@ -125,6 +130,7 @@
 			files = (
 				61B2E6BC29B4A18D00765413 /* Assets.xcassets in Resources */,
 				61B2E6BD29B4A18D00765413 /* Launch Screen.storyboard in Resources */,
+				61LOC001 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +147,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		61LOC000 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61LOC002 /* de */,
+				61LOC003 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		583A3DA02124A89D00619099 /* Debug */ = {
