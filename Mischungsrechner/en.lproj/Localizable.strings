@@ -35,8 +35,6 @@
 "cost.pricePerLiter" = "Price per liter";
 "cost.perFill" = "Cost per fill";
 
-/* Party Mode */
-"partyMode" = "Party mode";
 
 /* Presets */
 "presets.title" = "Products";
@@ -54,7 +52,6 @@
 
 /* Alerts */
 "alert.saved" = "Saved";
-"alert.savedMessage" = "The calculation has been saved to history.";
 
 /* Share */
 "share.ratio" = "Mixing ratio";
@@ -91,19 +88,22 @@
 "preset.ironRemover" = "Iron Remover";
 
 /* Easter Eggs */
-"easter.keepTapping" = "Hmm... keep tapping...";
-"easter.secretUnlocked" = "SECRET MODE UNLOCKED!";
-"easter.secretMessage" = "You discovered the secret mode! The app is now in party mode! 🎊";
-"easter.partyOver" = "PARTY OVER";
-"easter.partyOverMessage" = "You left party mode. Back to normal view! 🙂";
-"easter.tooMuchTapping" = "Okay okay, you really like tapping on things!";
 "easter.coupon" = "Your coupon code for the GLOSSBOSS shop is mischungsrechner10";
 "easter.nice" = "Nice.";
 "easter.420" = "Dude... that's a lot of ml, man...";
 "easter.leet" = "L33T H4X0R detected! You know the old ways...";
 "easter.over9000" = "Over 9000!!! This bottle size is OVER 9000!!!";
 "easter.whale" = "That's %d liters! Planning a whale party?";
-"easter.zeroBottle" = "A 0ml bottle? That's... philosophical.";
 "easter.42" = "42? The answer to the ultimate question of life, the universe, and everything!";
 "easter.pi" = "Pi detected! 3.14... mmm, pie! 🍰";
 "easter.leetRatio" = "1337 ratio detected! You mix like a true hacker!";
+
+/* Native UI */
+"ratio.common" = "Common ratios";
+"ratio.custom" = "Custom";
+"amount.common" = "Common sizes";
+"unit.title" = "Unit";
+"button.saveHistory" = "Save to History";
+"presets.saveCurrent" = "Save Current Ratio";
+"history.clear" = "Clear";
+"history.clearConfirm" = "Clear the entire history?";
