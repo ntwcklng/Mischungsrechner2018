@@ -288,6 +288,7 @@ struct ContentView: View {
             .font(.system(.title, design: .rounded, weight: .semibold))
             .multilineTextAlignment(.center)
             .keyboardType(.decimalPad)
+            .alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
 
             Picker("ratio.common".localized, selection: presetBinding(
                 current: "\(part1):\(part2)",
@@ -318,6 +319,7 @@ struct ContentView: View {
                     .font(.title3)
                     .foregroundStyle(.secondary)
             }
+            .alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
 
             if mode == .normal {
                 let sizes = useOunces ? Self.ozPresets : Self.mlPresets
